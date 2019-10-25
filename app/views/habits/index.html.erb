@@ -1,1 +1,19 @@
-Index
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1 class="text-center">Habits</h1>
+    <div class="well">
+      <ul>
+      <%= flash[:notice] %>
+        <% @habits.each do |habit| %>
+          <% if habit %>
+            <li>
+            <div class >
+              <%= habit.title %><br/>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+      <%= link_to 'Add habit', new_habit_path(@user) %>
+    </div>
+  </div>
+</div>

@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+params =  { :habits => {
+      :title => 'Gina',
+      :description => 'Cool example habit',
+      :difficulty => '2',
+      :frequency => '3'
+    }
+}
+
+a = User.find(3)
+
+a.habits.create!(params[:habits])
